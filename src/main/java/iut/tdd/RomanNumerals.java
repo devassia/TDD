@@ -12,14 +12,18 @@ public class RomanNumerals {
 				res=aideconv(tmp)+"M";
 				nb=nb-tmp*1000;
 			}
-			int tmp=nb/500
-			else if () {
-				
-			} else {
 
+		    tmp=nb/500;
+			if (tmp>500) {
+				res=aideconv(tmp)+"D";
+				nb=nb-tmp*500;
+			} 
+			else {
+				res=res+aideconv(nb);
 			}
+			return aideconv(nb);
 		}
-		return "res";
+		return "I";
 	}
 
 	public Object convertFromRoman(String roman) {
@@ -37,7 +41,7 @@ public class RomanNumerals {
 		res="II";
 		break;
 		case 3:  romain=3 ;
-		res="II";
+		res="III";
 		break;
 		case 4:  romain=4 ;
 		res="IV";
@@ -57,7 +61,7 @@ public class RomanNumerals {
 		case 9:  romain=9 ;
 		res="IX";
 		break;
-		default: res= "Invalid number";
+		default: res= "";
 		break;
 		}
 		return res;
